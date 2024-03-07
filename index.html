@@ -1,0 +1,1138 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Перечень действий для воркшоп 2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4202da5e-5b1b-4e3c-ad75-94d78b8f5204" class="page sans"><header><div class="page-header-icon undefined"><span class="icon">👩‍💻</span></div><h1 class="page-title">Перечень действий для воркшоп 2</h1><p class="page-description"></p><table class="properties"><tbody><tr class="property-row property-row-created_by"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedBy"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 10.4229C6.05176 10.4229 4.54785 11.1133 3.83008 11.9131C2.90039 10.9082 2.33301 9.55469 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 9.55469 13.1064 10.9082 12.1699 11.9131C11.4521 11.1133 9.94824 10.4229 8 10.4229ZM8 9.30176C9.32617 9.30859 10.3516 8.18066 10.3516 6.71094C10.3516 5.33008 9.31934 4.18164 8 4.18164C6.6875 4.18164 5.6416 5.33008 5.64844 6.71094C5.65527 8.18066 6.68066 9.28809 8 9.30176Z"></path></svg></span>Created by</th><td><span class="user"><img src="https://lh3.googleusercontent.com/a/ACg8ocKYrYwOlWyp4EEa-4vmpwcrYC0nyB5RtrmpLjngy9qPpsg=s100" class="icon user-icon"/>Anton Mirko</span></td></tr><tr class="property-row property-row-created_time"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesCreatedAt"><path d="M8 15.126C11.8623 15.126 15.0615 11.9336 15.0615 8.06445C15.0615 4.20215 11.8623 1.00293 7.99316 1.00293C4.13086 1.00293 0.938477 4.20215 0.938477 8.06445C0.938477 11.9336 4.1377 15.126 8 15.126ZM8 13.7383C4.85547 13.7383 2.33301 11.209 2.33301 8.06445C2.33301 4.91992 4.84863 2.39746 7.99316 2.39746C11.1377 2.39746 13.6738 4.91992 13.6738 8.06445C13.6738 11.209 11.1445 13.7383 8 13.7383ZM4.54102 8.91211H7.99316C8.30078 8.91211 8.54004 8.67285 8.54004 8.37207V3.8877C8.54004 3.58691 8.30078 3.34766 7.99316 3.34766C7.69238 3.34766 7.45312 3.58691 7.45312 3.8877V7.83203H4.54102C4.2334 7.83203 4.00098 8.06445 4.00098 8.37207C4.00098 8.67285 4.2334 8.91211 4.54102 8.91211Z"></path></svg></span>Created time</th><td><time>@February 19, 2024 10:31 PM</time></td></tr><tr class="property-row property-row-multi_select"><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>Tags</th><td></td></tr></tbody></table></header><div class="page-body"><figure id="376ee475-52ca-4032-9f7c-400630149434" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled.png"><img style="width:84px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled.png"/></a></figure><h1 id="e594cdf6-270a-455a-ac2e-671067683d53" class="block-color-red">                                            Привет комрад !</h1><p id="b56b11fa-6f78-4962-8f86-3ef6957aea38" class="">Данная страница нужна для того, чтобы ты мог всегда обратиться к командам нашего воркшопа. Тут будут описаны все команды нашего второго модуля.</p><h1 id="f68cc57b-d1e5-4112-ae89-cb253e44a94e" class="block-color-yellow"><mark class="highlight-purple">Подготовка рабочей зоны</mark></h1><p id="d4368b7d-98ab-4065-84d2-f1d4d7b7db8b" class="">Выполняйте команды последовательно одна за одной</p><h3 id="a76bccbe-a4cb-4b57-851c-f87a2727a638" class=""><mark class="highlight-brown">Удалите старый контроллер WeatherForecastController</mark></h3><p id="08f0459e-fdce-4343-bfbd-8cc196813079" class="">Для начала работы нужно удалить два файла <code>WeatherForecast</code> и <code>WeatherForecastController</code>  из сервиса CustomerService.</p><figure id="3c674b15-9015-4d95-b7d2-e36baff09146" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%201.png"><img style="width:384px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%201.png"/></a></figure><h3 id="5c36d16a-066b-4563-8383-a2c91cfcebcf" class=""><mark class="highlight-brown">Нужно создать новый файл Startup.cs</mark></h3><p id="ec2ce3be-06a5-48e4-8229-14cadd63b739" class="">Наш сервис был создан из шаблона компании microsoft. Данный шаблон предусматривает использование более нового формат создания хоста. Потому наш код выглядит на данный момент только из одного файла, а именно из файла Program.cs<br/>В нашей компании Озон, вы будет работать с комбинацией файлов Startup.cs и Program.cs<br/>Потому нам следует перенести код из одного файла в другой, но перед этим создать недостающий файл.<br/></p><figure id="81d7148b-5c5b-41e6-b966-65970344133e" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%202.png"><img style="width:528px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%202.png"/></a></figure><p id="144353e5-34a9-46fb-86a6-c72d46ae70ca" class="">Создаём новый файл с именем Startup.cs и перекопируем код выше на скриншоте. В итоге у нас должен получиться вот такой файл</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ee50e06e-d926-4611-81f6-0ebacc97740e" class="code"><code class="language-C#">namespace Ozon.Route256.Practice.CustomerService;
+
+public sealed class Startup
+{
+    private readonly IConfiguration _configuration;
+
+    public Startup(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
+    public void ConfigureServices(IServiceCollection serviceCollection)
+    {
+        serviceCollection.AddControllers();
+        serviceCollection.AddEndpointsApiExplorer();
+        serviceCollection.AddSwaggerGen();
+    }
+
+    public void Configure(IApplicationBuilder applicationBuilder)
+    {
+        applicationBuilder.UseRouting();
+        applicationBuilder.UseSwagger();
+        applicationBuilder.UseSwaggerUI();
+        applicationBuilder.UseHttpsRedirection();
+        applicationBuilder.UseAuthorization();
+    }
+}</code></pre><h3 id="136fda9e-8631-4000-bb36-017f799b9cbb" class=""><mark class="highlight-brown">Нужно переоформить файл Program.cs</mark></h3><p id="6d63fc1a-6648-40ac-8fe3-337f2dae5f76" class="">Так как вынесли логику из файла Program, теперь нам надо данный файл также привести в нужный вид. В итоге мы получим вот такой файл</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="affb7fa3-cd8a-4537-a6b2-c2bd607102e9" class="code"><code class="language-C#">using Ozon.Route256.Practice.CustomerService;
+
+await Host
+    .CreateDefaultBuilder(args)
+    .ConfigureWebHostDefaults(builder =&gt; builder.UseStartup&lt;Startup&gt;())
+    .Build()
+    .RunAsync();</code></pre><h3 id="73fc9786-580a-4ccd-a708-d2444ff137da" class=""><mark class="highlight-brown">Давайте проверим, что наш проект собирается и запускается</mark></h3><p id="33fe6876-2727-44af-9237-f5a344560a34" class="">Запустим процесс сборки нашего сервиса. Далее запустим сервис и проверим, что запускается наш свагер.</p><h3 id="6c8de42f-acaf-4690-887c-5f7851a39287" class=""><mark class="highlight-brown">Внутрь конструктора Startup, можно пробросить только 3 интерфейса</mark></h3><p id="85a4165f-d24c-42db-b39d-782978daa5dd" class=""><code>IConfiguration</code> <code>IWebHostEnvironment</code> <code>IHostEnvironment</code> для данных интерфейсов не требуется создание DI зависимостей. Любой интерфейс типа ILogger и остальные схожие с ним и которые живут, а также работают только после инициализации DI, не могут быть использованы как параметры внутри Startup конструктора.</p><figure id="4151f73a-8edb-4c66-86bb-2db338b86a0c" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%203.png"><img style="width:480px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%203.png"/></a></figure><p id="445e39cb-ee7f-4390-9077-0e011ee6ef61" class="">Кому интересно узнать почему именно эти три интерфейса то вот вам ссылка, на <a href="https://github.com/dotnet/aspnetcore/blob/8e435d10fd8a529486744a419a004c2e9739040a/src/Hosting/Hosting/src/GenericHost/GenericWebHostBuilder.cs#L360">провайдер которым мы оперируем под капотом</a>. Внимательно посмотрите на 373 строчку и вы увидите наш перечень.</p><h3 id="47b0e581-1242-4b56-84d9-34d9b6f31b13" class=""><mark class="highlight-brown">Как регистрируются middleware в Kestrel</mark></h3><p id="98641cb9-f582-4782-84f3-574138f1bf7c" class="">Тем кому будет интересно как запускается Kestrel под капотом, то вы можете пройти <a href="https://github.com/dotnet/aspnetcore/blob/8e435d10fd8a529486744a419a004c2e9739040a/src/Hosting/Hosting/src/Internal/HostingApplication.cs#L13">по этой ссылке</a> и посмотреть на класс хостинга. Данный класс создается вовремя сборки GenericWebHostService как видно по <a href="https://github.com/dotnet/aspnetcore/blob/8e435d10fd8a529486744a419a004c2e9739040a/src/Hosting/Hosting/src/GenericHost/GenericWebHostService.cs#L159">этой ссылке</a>, наш класс HostingApplication создается в методе StartAsync. Далее этот класс необходим для того, что-бы запустить наш Kestrel это можно обнаружить перейдя <a href="https://github.com/dotnet/aspnetcore/blob/8e435d10fd8a529486744a419a004c2e9739040a/src/Servers/Kestrel/Core/src/Internal/KestrelServerImpl.cs#L120">по этой ссылке</a>. Также в самом методе StartAsync в Kestrel можно заметить такую сущность как - <a href="https://github.com/dotnet/aspnetcore/blob/8e435d10fd8a529486744a419a004c2e9739040a/src/Servers/Kestrel/Core/src/ListenOptions.cs#L17">ListenOptions</a>. Данный <a href="https://github.com/dotnet/aspnetcore/blob/8e435d10fd8a529486744a419a004c2e9739040a/src/Servers/Kestrel/Core/src/ListenOptions.cs#L206">класс регистрирует</a> и биндед конкретные middleware к запросу, который пришел в Kestrel.</p><h1 id="a5205b21-85af-4218-a65b-2c23f53bca13" class="block-color-yellow"><mark class="highlight-purple">Разработка grpc клиента сервиса CustomerService</mark></h1><p id="da87ccc7-cd76-4e6a-b95e-05cb18dcafa5" class="">В данной части мы с вами подключим к нашему сервису grpc клиента, который сами напишем и попробуем с ним поработать.</p><h3 id="5cc01004-c1a5-4541-a1f4-e424729449d2" class=""><mark class="highlight-brown">Создадим папку под наш proto контракт</mark></h3><p id="f4ed18d6-a717-40a3-b7dd-1f8f41b17321" class="">Нужно перейти в наш проект  <code>CustomerService</code> и внутри этого сервиса создать папку  <code>Protos</code>. Внутри этой папки нужно создать файл  <code>customers.proto</code>. Правило наименования proto файлов представлено <a href="https://protobuf.dev/programming-guides/dos-donts/">вот тут</a><br/>По хорошему мы должны создавать прото файлы с именем формата <br/><strong>lower_snake_case.proto</strong></p><figure id="904df56d-070b-4973-8423-4b28cf26a645" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%204.png"><img style="width:336px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%204.png"/></a></figure><p id="c7007b05-3b76-436e-b159-a6c77d2b9312" class="">После создания файла, нужно внутри нашего первого proto прописать внутреннюю реализацию.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="53e7d1c2-e41f-4ff3-b751-819667bd2d0c" class="code"><code class="language-Protobuf">syntax = &quot;proto3&quot;;
+
+option csharp_namespace = &quot;Ozon.Route256.Practice&quot;;
+
+service Customers
+{
+  rpc GetCustomer(GetCustomerByIdRequest) returns(GetCustomerByIdResponse);
+}
+
+message GetCustomerByIdRequest {
+  int32 id = 1;
+}
+
+message GetCustomerByIdResponse {
+    Customer customer = 1;
+}
+
+message Customer {
+  int32 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string mobile_number = 4;
+  string email = 5;
+  Address default_address = 6;
+  repeated Address addressed = 7;
+}</code></pre><p id="95dc9e24-25af-4e7c-ac7e-b6b4f7e60f8d" class="">Давайте рассмотрим каждый элемент описания по отдельности.</p><p id="d4930c67-870b-4c3d-8b7d-707058c52132" class=""><strong>Выбор версии языка protobuf</strong></p><blockquote id="8a903000-0059-4d8f-b25d-3e3956c24c9c" class="">syntax = &quot;proto3&quot;;</blockquote><p id="4ee41707-4a65-4d29-8b8c-c63d679da05b" class="">Нужно четко понимать в какой версии вы хотите работать. Разница может быть кардинальной с переходом на новую версию. Вы можете более детально погрузится в область <strong><a href="https://protobuf.dev/programming-guides/proto2/">proto2</a></strong> и в область<strong> </strong><a href="https://protobuf.dev/programming-guides/proto3/"><strong>proto3</strong></a></p><p id="cbf57b0c-e1e4-45a2-a8ba-116a36614632" class=""><strong>Использование опционального атрибута csharp_namespace</strong></p><blockquote id="94df566d-27b6-4e4d-8d6e-241c95e1a9e4" class="">option csharp_namespace = &quot;Ozon.Route256.Practice&quot;;</blockquote><p id="44130161-6f7b-4f62-899c-99b53bd4d5b9" class=""> В нашем protobuf вы можете заметить использование такого параметра как csharp_namespace. Данный параметр отвечает за создаваемый namespace генерируемых файлов из proto файла. Если не использовать явное инициализирование, то protobuf возьмет структуру нашего проекта. Более детально можно прочитать <a href="https://protobuf.dev/reference/csharp/csharp-generated/#compiler_options">тут</a></p><p id="bc7475fd-81a5-4c0a-9d95-7060eab3e5b1" class=""><strong>Правила наименование методов и передаваемых запросов и ответов</strong></p><blockquote id="fde99952-955b-423d-aeb4-6aebd08b4a21" class="">rpc GetCustomer(GetCustomerByIdRequest) returns(GetCustomerByIdResponse);</blockquote><p id="469ea804-ca17-4adf-b26b-d4090d618546" class="">В процессе обдумывания контракта, мы с вами должны помнить, что название запросов должно заканчиваться на Request, а респонс на Response. Также нужно учитывать, что нужно создавать уникальный прототип запроса и ответа для каждого метода RPC. Обнаружение позже того, что вам нужно отклониться от запроса или ответа верхнего уровня, может оказаться дорогостоящим. Сюда входят «пустые» ответы; создайте уникальный прототип пустого ответа, а не повторно используйте известный тип сообщения Empty. Сокращенно это правило называется - <a href="https://protobuf.dev/programming-guides/api/#unique-protos"><strong>Create Unique Protos per Method</strong></a><strong>.</strong> Более детальное правило можно посмотреть <a href="https://protobuf.dev/programming-guides/style/#services">тут</a></p><p id="f2664824-fe09-4807-b727-1eb56098521d" class="">Также советую пройтись по списку, <a href="https://protobuf.dev/programming-guides/dos-donts/">чего стоит избегать при работе с protobuf.</a></p><h3 id="747d6847-b3e6-4d80-bb5a-2c40f811fcee" class=""><mark class="highlight-brown">В сервисе CustomerService подключить библиотеки</mark></h3><p id="dd385d6d-c67e-44b6-8a56-2247d7c118dd" class="">Для того что-бы заработал grpc контракты нужно подключить библиотеку <code>Grpc.AspNetCore</code></p><p id="1618f6e7-15e5-4ebc-8419-139caced8c6d" class="">Ниже будет пример того как было подключенно</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0dc2ac9a-411a-47f5-ae4d-16f6d910f561" class="code"><code class="language-C#">&lt;ItemGroup&gt;
+    &lt;PackageReference Include=&quot;Swashbuckle.AspNetCore&quot; Version=&quot;6.2.3&quot;/&gt;
+&lt;/ItemGroup&gt;</code></pre><p id="9a73c1d9-d5a3-40d9-b4af-bf8aef69024d" class="">Теперь как будет подключено</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2c6bcb78-6e2b-4cfb-af8e-ed811d8230c9" class="code"><code class="language-C#">&lt;ItemGroup&gt;
+    &lt;PackageReference Include=&quot;Grpc.AspNetCore&quot; Version=&quot;2.60.0&quot; /&gt;
+    &lt;PackageReference Include=&quot;Swashbuckle.AspNetCore&quot; Version=&quot;6.5.0&quot; /&gt;
+&lt;/ItemGroup&gt;
+
+&lt;ItemGroup&gt;
+    &lt;Protobuf Include=&quot;Protos/*.proto&quot; Type=&quot;Both&quot; /&gt;
+&lt;/ItemGroup&gt;</code></pre><p id="2bd1861d-587c-4faf-919a-ba2b90e52131" class="">Блок с Protobuf нужен для того, что-бы в папке <code>Protos</code> были найдены все файлы с расширением .proto и для дальнейшего их преобразования в c# классы.</p><h3 id="d51caf64-da8c-44ef-8cb8-974e7314ed96" class=""><mark class="highlight-brown">Подключаем grpc зависимости к нашему проекту</mark></h3><p id="27e3c301-8ffe-49af-830b-a3fea1c171b2" class="">В данном блоке после подключения библиотек, нам нужно внедрить grpc зависимости, что-бы это сделать нам надо в блок Startup дописать новый код и убрать свагер зависимости. Код будет рассмотрен ниже.<br/><br/><mark class="highlight-purple"><strong>Фиолетовым</strong></mark> будет помечено то, что было <strong>удаленно</strong><br/><br/><mark class="highlight-teal"><strong>Зелёным</strong></mark> будет помечено то, что было <strong>добавленно</strong></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2040b895-8166-4068-a47a-e69eae92b290" class="code"><code class="language-C#">public void ConfigureServices(IServiceCollection serviceCollection)
+{
+    serviceCollection.AddGrpc();
+    serviceCollection.AddControllers();
+    serviceCollection.AddEndpointsApiExplorer();
+    serviceCollection.AddSwaggerGen();
+}
+
+public void Configure(IApplicationBuilder applicationBuilder)
+{
+    applicationBuilder.UseRouting();
+    applicationBuilder.UseSwagger();
+    applicationBuilder.UseSwaggerUI();
+    applicationBuilder.UseHttpsRedirection();
+    //applicationBuilder.UseAuthorization();
+    applicationBuilder.UseEndpoints(endpointRouteBuilder =&gt;
+    {
+        endpointRouteBuilder.MapGrpcService&lt;CustomersService&gt;();
+    });
+}</code></pre><p id="ce237cc9-9cdd-4b73-8f72-df19ffc676d6" class="">Код который помечен <mark class="highlight-purple">фиолетовым</mark> и комментариями, то его можно удалить. </p><h3 id="d6e1724f-5bef-4851-91c4-33a9e3c4a98e" class=""><mark class="highlight-brown">Создаем grpc сервисы</mark></h3><p id="0567958c-38be-494f-82b7-5f01e9f17400" class="">В данном блоке мы с вами подключим сервисы, которые будут обрабатывать запросы клиента. Для этого нам нужно создать папку <code>GrpcServices</code> внутри нашего сервиса. Далее внутри данной папки нам нужно создать файл <code>CustomerService</code> </p><figure id="04bbcc41-a247-4816-a6c2-d14f432308ee" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%205.png"><img style="width:384px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%205.png"/></a></figure><p id="887c6954-e2f2-4827-b5d4-74554e2233de" class="">Далее нам нужно написать простой обработчик запросов внутри нашего <code>CustomerService</code> Для этого нам нужно написать следующий код</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="81b98eb0-7e5e-4450-bf40-54cdf2b84794" class="code"><code class="language-C#">public sealed class CustomersService : Customers.CustomersBase
+{
+    public override Task&lt;GetCustomerByIdResponse&gt; GetCustomerById(GetCustomerByIdRequest request, ServerCallContext context)
+    {
+        return Task.FromResult(new GetCustomerByIdResponse { Customer = new Customer { Id = 1 }});
+    }
+}</code></pre><p id="2007d7aa-fdf0-49cc-be7b-c63c1ac8157d" class="">В данном случае у нас класс родитель <code>Customers.CustomersBase</code> является собранным классом из нашего прото файла <code>customers.proto</code> в данном классе созданы все наши Requests\Reponses и другие контракты и методы. Нам нужно оверайднуть встроенный метод <code>GetCustomerById</code> и переписать на простое использование, что-бы потом в ручке глянуть результат нашего запроса.</p><h3 id="8a318e68-4d42-45ee-ac74-e7386603a94f" class=""><mark class="highlight-brown">Нужно подготовить порт для работы с Http2</mark></h3><p id="76964c77-f305-4d92-a249-f7e38bec0184" class="">Переходим в наш <code>launchSettings.json</code> который расположен в папке <code>Properties</code> </p><figure id="71f771bf-e1bd-44cb-9de2-bfebf514f374" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%206.png"><img style="width:336px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%206.png"/></a></figure><p id="590e397d-5c0d-4176-9c0d-11853102814a" class="">Внутрь данного файла нужно добавить новые параметры внутрь <code>Ozon.Route256.Practice.CustomerService</code></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="cb8a6fa6-e782-48e3-98e4-d9c25ab1cb7a" class="code"><code class="language-JSON">&quot;ROUTE256_SD_ADDRESS&quot;: &quot;http://localhost:6081&quot;,
+&quot;ROUTE256_GRPC_PORT&quot;: &quot;5005&quot;,
+&quot;ROUTE256_HTTP_PORT&quot;: &quot;5004&quot;</code></pre><p id="37983ebc-9820-417b-ab43-7348160c2dec" class="">Далее переходим в наш <code>Program.cs</code> и добавляем новый код. Наш новый код позволяет регистрировать порты для нашей будущей работы. В данной части мы хотим уметь задавать порт для grpc и http, через параметры среды. </p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6e107c5e-0fe6-4a63-8659-d7749c169f88" class="code"><code class="language-C#">using Microsoft.AspNetCore.Server.Kestrel.Core;
+using Ozon.Route256.Practice.CustomerService;
+using static System.Int32;
+
+await Host
+    .CreateDefaultBuilder(args)
+    .ConfigureWebHostDefaults(builder =&gt; builder.UseStartup&lt;Startup&gt;()
+        .ConfigureKestrel(option =&gt;
+        {
+            option.ListenPortByOptions(ProgramExtension.ROUTE256_GRPC_PORT, HttpProtocols.Http2);
+            option.ListenPortByOptions(ProgramExtension.ROUTE256_HTTP_PORT, HttpProtocols.Http1);
+        }))
+    .Build()
+    .RunAsync();
+
+public static class ProgramExtension
+{
+    public const string ROUTE256_GRPC_PORT = &quot;ROUTE256_GRPC_PORT&quot;;
+    public const string ROUTE256_HTTP_PORT = &quot;ROUTE256_HTTP_PORT&quot;;
+    
+    public static void ListenPortByOptions(
+        this KestrelServerOptions option,
+        string envOption,
+        HttpProtocols httpProtocol)
+    {
+        var isHttpPortParsed = TryParse(Environment.GetEnvironmentVariable(envOption), out var httpPort);
+        
+        if (isHttpPortParsed)
+        {
+            option.Listen(IPAddress.Any, httpPort, options =&gt; options.Protocols = httpProtocol);
+        }
+    }
+}</code></pre><p id="68863f8f-b94e-4985-896a-eb8341767bf4" class="">Данный код лучше не использовать в проде, он создан для ознакомления с тем инструментарием, который вам может понадобиться в будущем.</p><h3 id="c1c99d20-df7d-42a7-b14c-159c89d2ac4c" class=""><mark class="highlight-brown">Теперь нам нужно проверить, что наш сервис работает и возвращает данные</mark></h3><p id="626d3c34-1702-475b-b740-1730e91962dd" class="">Для данного решения нам нужно скачать инструмент <a href="https://www.postman.com/downloads/">Postman</a>. После того как вы его установите, вы сможете зайти без регистрации просто нажав снизу использовать без авторизации. Далее у вас откроется вот такое окно.</p><figure id="aa8c6452-1215-43b3-98a6-e0580852f5b6" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%207.png"><img style="width:672px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%207.png"/></a></figure><p id="921d59cf-f6dc-45d4-8a01-b86b513aa841" class="">Далее нам нужно перейти в блок <strong>New </strong>и выбрать<strong> gRPC</strong></p><figure id="3fd91b59-22b2-4fcb-83ae-ac6fe312d861" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%208.png"><img style="width:480px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%208.png"/></a></figure><p id="a76c0ffa-1ca1-4561-b032-21127471bacb" class="">После этого нужно в поле адреса вписать адрес и порт нашего сервиса. В нашем случае это <strong>grpc://localhost:5005 </strong>после этого нужно перейти на вкладку <strong>Service definition </strong>и там нужно указать путь до нашего прото файла который мы делали ранее, а именно <code>customers.proto</code> </p><figure id="a9031e5d-d2d3-487b-ac0b-b6a1c2c4aa20" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%209.png"><img style="width:624px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%209.png"/></a></figure><p id="27376e89-8a78-481d-b5d0-386f3629e84a" class="">После данных манипуляций, мы с вами можем перейти в блок методов и у нас должен появится наш метод, который мы написал ранее.</p><figure id="345b3ad8-d200-45c9-b8cf-62d521352260" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2010.png"><img style="width:576px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2010.png"/></a></figure><p id="d9bedac1-081d-4348-ac62-0a29ffcafd7a" class="">Выбираем данный метод и переходим на вкладку <strong>Message </strong>там нам нужно нажать на кнопку<strong> Use Example Message</strong>. Мы готовы к проверке нашего сервиса</p><figure id="570bc357-63d2-4e87-b2e2-8fd64a8f4fea" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2011.png"><img style="width:672px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2011.png"/></a></figure><p id="b5f98bee-8a11-4459-a33d-5dd8ffff4aa5" class="">Теперь запускаем наш запрос до сервиса. Должны получить ответ со статусом 0 и телом нашего ответа.</p><figure id="81797af6-6578-4f29-bb9e-284b9c4f79f3" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2012.png"><img style="width:720px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2012.png"/></a></figure><p id="1b5bc227-871f-4a34-aa7a-5ecae0549aaa" class="">Если наш сервис вернул ответ, ты вы сделали все верно.</p><h3 id="1dc780b0-1a70-4a52-a702-e73381ef539a" class=""><mark class="highlight-brown">Подключаем первый наш перехватчик (interceptor)</mark></h3><p id="29399257-1ff7-4e98-a377-708ed0223336" class="">Для начала нам надо расширить наш контракт в <code>customers.proto</code> полным нашим контрактом. Расширенный контракт предлагаю перенести к себе просто скопировав, там и без лишних слова понятно что мы добавили.</p><p id="58eb4410-8d6b-4c27-819a-81e08b81a8cf" class=""> </p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bb8d9f7c-df4e-47c8-9892-441f86024d2e" class="code"><code class="language-Protobuf">syntax = &quot;proto3&quot;;
+
+option csharp_namespace = &quot;Ozon.Route256.Practice&quot;;
+
+service Customers {
+  rpc GetCustomerById(GetCustomerByIdRequest) returns(GetCustomerByIdResponse);
+  rpc GetCustomers(GetCustomersRequest) returns (GetCustomersResponse);
+  rpc GetCustomersForGenerator(GetCustomersForGeneratorRequest) returns (GetCustomersForGeneratorResponse);
+  rpc CreateCustomer(CreateCustomerRequest) returns (CreateCustomerResponse);
+  rpc GetCustomerByLastName(GetCustomerByLastNameRequest) returns (GetCustomerByLastNameResponse);
+}
+
+// ---  GetCustomerById  ---
+
+message GetCustomerByIdRequest {
+  int32 id = 1;
+}
+
+message GetCustomerByIdResponse {
+    Customer customer = 1;
+}
+
+// ---  GetCustomers  ---
+
+message GetCustomersRequest {
+}
+
+message GetCustomersResponse
+{
+  repeated Customer customers = 1;
+}
+
+// ---  GetCustomersForGenerator  ---
+
+message GetCustomersForGeneratorRequest {
+  int32 id = 1;
+}
+
+message GetCustomersForGeneratorResponse
+{
+  int32 id = 1;
+  Address address = 6;
+}
+
+// ---  CreateCustomer  ---
+
+message CreateCustomerRequest
+{
+  Customer customer = 1;
+}
+
+message CreateCustomerResponse {
+}
+
+// ---  GetCustomerByLastName  ---
+
+message GetCustomerByLastNameRequest
+{
+  string lastName = 1;
+}
+
+message GetCustomerByLastNameResponse
+{
+  repeated Customer customers = 1;
+}
+
+// ---  Common  ---
+
+message Customer {
+  int32 id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string mobile_number = 4;
+  string email = 5;
+  Address default_address = 6;
+  repeated Address addressed = 7;
+}
+
+message Address {
+  string region = 1;
+  string city = 2;
+  string street = 3;
+  string building = 4;
+  string apartment = 5;
+  double latitude = 6;
+  double longitude = 7;
+}</code></pre><p id="522cde37-a9f9-49fe-ab67-a32e3ff02d04" class="">После того как мы заменили наш контракт на более новый, нам нужно запустить процесс сборки проекта. Нужно это было для того, что-бы были созданы новые файлы из proto контракта.</p><p id="cf4262af-a518-4f1d-838b-40992e82300a" class="">Далее нам надо перейти в наш сервис <code>CustomerService</code> и добавить новые метод через оверайд. Добавляем 4-е новых метода представленных ниже.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7843456c-0921-45f5-849b-8b89c3eec52a" class="code"><code class="language-C#">public override Task&lt;GetCustomersResponse&gt; GetCustomers(GetCustomersRequest request, ServerCallContext context)
+{
+    throw new RpcException(new Status(StatusCode.NotFound,&quot;Clients not founded&quot;));
+}
+
+public override Task&lt;GetCustomersForGeneratorResponse&gt; GetCustomersForGenerator(GetCustomersForGeneratorRequest request, ServerCallContext context)
+{
+    throw new NotFoundException($&quot;Client with id = {request.Id} not founded&quot;);
+}
+
+public override Task&lt;CreateCustomerResponse&gt; CreateCustomer(CreateCustomerRequest request, ServerCallContext context)
+{
+    throw new NotFoundException($&quot;Client with id = {request.Customer.Id} not founded&quot;);
+}
+
+public override Task&lt;GetCustomerByLastNameResponse&gt; GetCustomerByLastName(GetCustomerByLastNameRequest request, ServerCallContext context)
+{
+    throw new NotFoundException($&quot;Client with last name = {request.LastName} not founded&quot;);
+}</code></pre><p id="9164b502-3f30-4af0-9b6f-3eab7924ce40" class="">Как можно заметить мы апеллируем новой ошибкой <code>NotFoundException</code> данную ошибку, мы завели самостоятельно что-бы в будущем более простым способ разделять бизнес процессы по ошибкам. Что-бы создать такую ошибку, то нужно перейти в каталог нашего проекта и создать новую папку <code>Exceptions</code> и в ней надо создать новый класс <code>NotFoundException</code>  пример кода ниже</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="cd69484c-10a4-4dc4-923f-8eb5f56b90b6" class="code"><code class="language-C#">namespace Ozon.Route256.Practice.CustomerService.Exceptions;
+
+public class NotFoundException : Exception
+{
+    public override string Message { get; }
+    
+    public NotFoundException(string exceptionMessage)
+    {
+        Message = exceptionMessage;
+    }
+}</code></pre><p id="d717fecc-14ed-4305-9a63-33b58ff0e6f1" class="">Возвращаемся в наш класс <code>CustomerService</code> можно заметить, что мы используем два варианта возвращать ошибку. Давайте более детально рассмотрим эту разницу. Мы с вами про работе с grpc переходим на другую область работы со статусами. Старые HTTP статус нам не интересны, потому что у grpc есть свои статусы и свои ошибки, полный перечень представлен <a href="https://grpc.github.io/grpc/core/md_doc_statuscodes.html">тут</a></p><p id="7f48c6c0-2197-48d2-8f94-1eee501b9b91" class="">Потому в методе <code>GetCustomers</code> мы использовали ошибки самого Rpc.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e979729b-13b5-4059-98ad-9b4a03d74caf" class="code"><code class="language-C#">public override Task&lt;GetCustomersResponse&gt; GetCustomers(GetCustomersRequest request, ServerCallContext context)
+{
+    throw new RpcException(new Status(StatusCode.NotFound,&quot;Clients not founded&quot;));
+}</code></pre><p id="b552b884-18f5-46b4-80c2-8110f423fedd" class="">А в других методах мы использовали наш собственный к примеру метод <code>CreateCustomer</code></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9c8b31f7-fddb-48b9-9660-f9bc4fabe0d2" class="code"><code class="language-C#">public override Task&lt;CreateCustomerResponse&gt; CreateCustomer(CreateCustomerRequest request, ServerCallContext context)
+{
+    throw new NotFoundException($&quot;Client with id = {request.Customer.Id} not founded&quot;);
+}</code></pre><p id="27c59fa2-3c6a-4086-8c40-63645a289794" class="">В случае если мы запросим метод <code>CreateCustomer</code> то мы получим ошибку со статусом <strong>Unknown</strong>, что на стандартный HTTP статус можно перевести как 500 <strong>Internal Server Error</strong>.<br/>Но в случае <br/><code>GetCustomers</code> наш сервис вернет статус <strong>NotFound</strong>, что в свою очередь равно HTTP статусу 404 <strong>Not Found</strong>.</p><p id="68154388-938f-49c0-8c3a-e711a4a65c41" class="">Теперь понимая общую специфику нам нужно создать свой первый перехватчик, который будет переводить ошибки RPC в ошибки HTTP, а именно ошибку <strong>Not Found</strong>. Кроме этого наш перехватчик будет синифить запрос и логировать их в нашу систему. Для этого нам нужно создать новую папку <code>Infrastructure</code> в этой папке нам нужно создать новый файл <code>LoggerInterceptor</code> . Наш новый класс должен наследоваться от класса <code>Interceptor</code> иначе ничего не заработает. Данный класс даёт нам возможность оверайднуть большой перечень методов (если будет интересно, то изучите каждый из методов самостоятельно) в нашем случае нам оверайднуть ровно один метод <code>UnaryServerHandler</code> . Ниже будет представлен код этого метода.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2e0fc531-d4c6-40c6-949d-bc7bd44ef988" class="code"><code class="language-C#">internal sealed class LoggerInterceptor : Interceptor
+{
+    private readonly ILogger&lt;LoggerInterceptor&gt; _logger;
+
+    public LoggerInterceptor(ILogger&lt;LoggerInterceptor&gt; logger)
+    {
+        _logger = logger;
+    }
+
+    public override async Task&lt;TResponse&gt; UnaryServerHandler&lt;TRequest, TResponse&gt;(
+        TRequest request,
+        ServerCallContext context,
+        UnaryServerMethod&lt;TRequest,
+            TResponse&gt; continuation)
+    {
+        _logger.LogInformation(&quot;Request {request}&quot;, request);
+
+        try
+        {
+            var response = await base.UnaryServerHandler(request, context, continuation);
+
+            _logger.LogInformation(&quot;Response {response}&quot;, response);
+
+            return response;
+        }
+        catch (RpcException ex)
+        {
+            _logger.LogError(ex, &quot;Some exception happened&quot;);
+            throw;
+        }
+        catch (NotFoundException ex)
+        {
+            _logger.LogError(ex, &quot;Some exception happened&quot;);
+            throw new RpcException(new Status(StatusCode.NotFound, ex.Message));
+        }
+        catch (Exception ex)
+        {
+            _logger.LogError(ex, &quot;Some exception happened&quot;);
+            throw new RpcException(new Status(StatusCode.Unknown, ex.Message));
+        }
+    }
+}</code></pre><p id="202a088c-2985-4ba1-8a54-e02e347de510" class="">В данном случае, мы пробросили логер для сохранения запросов и ответов и мы научились отлавливать ошибки и преобразовывать их в ошибки RPC. В данном случае, каждый наш перехвачик является подобие фильтра для restful ручек. Метод <code>var response = await base.UnaryServerHandler(request, context, continuation);</code> позволяет работать с условиями после выполнения действий нашего сервиса. Но этого нам не хватит, нам нужно так-же зарегистрировать наш перехватчик в <code>Startup</code> . Для этого нужно в <strong>AddGrpc</strong> добавить вызов лямбда функций как показано ниже. Тогда после этого заработает наш перехватчик.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3dc6247c-404b-4127-96a8-30fa53aa5bcc" class="code"><code class="language-C#">serviceCollection.AddGrpc(option =&gt; option.Interceptors.Add&lt;LoggerInterceptor&gt;());</code></pre><p id="7fc99469-df13-41ad-bfd8-9e06a6f290e6" class="">Перехватчики запускаются в том порядке, в котором вы их зарегистрировали.</p><h3 id="d86cc634-b644-46e0-a099-922514a04f76" class=""><mark class="highlight-brown">Включаем рефлексию proto контрактов</mark></h3><p id="54cde30b-c7e1-4aff-9e25-034a06efbbd5" class="">Для этого нужно установить новую библиотеку в наш сервиса. Название и версия представлены ниже.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7659ad26-111b-48ca-acba-655eb2420cf9" class="code"><code class="language-C#">&lt;PackageReference Include=&quot;Grpc.AspNetCore.Server.Reflection&quot; Version=&quot;2.57.0&quot; /&gt;</code></pre><p id="c5cf8bdd-27f0-4a8e-8cde-d3bb03e00f0a" class="">Далее переходим в наш <code>Startup</code> и в методе <code>ConfigureServices</code> регистрируем новый сервис <code>serviceCollection.AddGrpcReflection();</code></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="15f7667f-2e29-46ce-9bf7-086f23e9a6d4" class="code"><code class="language-C#">public void ConfigureServices(IServiceCollection serviceCollection)
+{
+    serviceCollection.AddGrpc(option =&gt; option.Interceptors.Add&lt;LoggerInterceptor&gt;());
+    serviceCollection.AddControllers();
+    serviceCollection.AddEndpointsApiExplorer();
+    serviceCollection.AddSwaggerGen();
+    serviceCollection.AddGrpcReflection();
+    serviceCollection.AddControllers();
+    serviceCollection.AddEndpointsApiExplorer();
+}</code></pre><p id="be7fd3e4-295f-413a-b4b2-efa60e2d2d4f" class="">Также нужно в методе <code>Configure</code> пробросить в <code>UseEndpoints</code> новые опции типа <code>MapGrpcReflectionService</code> итого у нас должно получится вот это. Код представлен ниже.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0965a9e6-6db4-4397-a72b-18e50d8df145" class="code"><code class="language-C#">public void Configure(IApplicationBuilder applicationBuilder)
+{
+    applicationBuilder.UseRouting();
+    applicationBuilder.UseSwagger();
+    applicationBuilder.UseSwaggerUI();
+    applicationBuilder.UseHttpsRedirection();
+    applicationBuilder.UseEndpoints(endpointRouteBuilder =&gt;
+    {
+        endpointRouteBuilder.MapGet(&quot;&quot;, () =&gt; &quot;Hello World!&quot;);
+        endpointRouteBuilder.MapGrpcService&lt;CustomersService&gt;();
+        endpointRouteBuilder.MapGrpcReflectionService();
+    });
+}</code></pre><p id="5082e60c-ea0b-4cd4-855e-80f7b6b4c038" class="">После этого можно вернуться в наш Postman и там поменять источник контракта с прото файла, на прото рефлексию.</p><figure id="0261f969-32c1-4c78-80de-e779ae361ef3" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2013.png"><img style="width:1686px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2013.png"/></a></figure><p id="3a840682-a08b-4168-8070-06cfe3657642" class="">Теперь мы спокойно можем обновлять новые методы, через рефлексию и не нужно будет лазить и искать прото контракты.</p><h1 id="4819e096-ca85-4977-89a7-3405bf396651" class="block-color-purple">Начало работы с ServiceDiscovery</h1><p id="48229d56-e9c1-4e4c-9d21-e9e80b48808e" class="">Теперь давайте перейдём к следующей части нашего воркшопа. Подключение клиента к ServiceDiscovery.</p><h3 id="0789a12d-58b7-459f-bfcf-e7190bf0ee62" class=""><mark class="highlight-brown">Подготовка к работе</mark></h3><p id="2ecf4635-674e-4cfd-ac59-8cda334d81bd" class="">Нужно скопировать файл <code>sd.proto</code> из папки <code>Protos</code> в проекте <code>Ozon.Route256.Practice.ServiceDiscovery</code> для чего это нужно ? Для того что-бы в нашем проекте <code>CustomerService</code> появились *.cs файлы из этого прото файла для создания контракта.</p><p id="bbe06f90-c60a-4152-a3f5-3a8fb7a99e36" class="">После этого нужно перейти в csproj нашего проекта <code>Ozon.Route256.Practice.CustomerService</code> и удалить выделенный кусок кода на скриншоте<br/><br/></p><figure id="ac467b57-4134-4acd-88fd-ecc5524bd8e9" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2014.png"><img style="width:576px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2014.png"/></a></figure><p id="bc76d377-9ca8-4330-9a72-d5455ef3bd92" class="">Теперь нужно перейти в наш <code>Startup</code> и там нужно добавить в методе <code>ConfigureServices</code> вот эту строчку </p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c19c464c-e94d-404f-a1aa-a6161d80220e" class="code"><code class="language-C#">serviceCollection.AddGrpcClient&lt;SdService.SdServiceClient&gt;();</code></pre><p id="8a8491d9-85c8-46f6-a6fe-40a634290f23" class="">Если не нашёлся наш клиент, то скорее всего вы положили прото файл не в ту папку или не запустили процесс сборки нашего проекта, что-бы преобразовать наш прото в *.cs файлы.</p><h3 id="91f2403b-878a-4630-8ff1-242140d0cbf4" class=""><mark class="highlight-brown">Создаем бэкграунд джобу для вычитывания данных из сервиса SD</mark></h3><p id="e630a46c-41c7-402f-ac6b-75e5673a4431" class="">Для этого нам надо создать новую папку <code>ClientBalancing</code> и внутри неё создать новый <code>SdConsumerHostedService.cs</code> файл. Внутри этого файла мы с вами обратимся к нашему клиента сервиса и подсядем на стрим хостов для кластера. Для этого мы в нашем новом классе создаём вот такой перечень команд</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a9d43da8-b1bf-4cc9-b213-ecd3e2cb558e" class="code"><code class="language-C#">public sealed class SdConsumerHostedService : BackgroundService
+{
+    private const int SD_TIME_TO_DELAY_MS = 1000;
+    
+    private readonly SdService.SdServiceClient _client;
+    private readonly ILogger&lt;SdConsumerHostedService&gt; _logger;
+
+    public SdConsumerHostedService(
+        SdService.SdServiceClient client,
+        ILogger&lt;SdConsumerHostedService&gt; logger)
+    {
+        _client = client;
+        _logger = logger;
+    }
+
+    protected override async Task ExecuteAsync(CancellationToken cancellationToken)
+    {
+        while (!cancellationToken.IsCancellationRequested)
+        {
+            
+        }
+    }
+}</code></pre><p id="cb261a01-5349-416c-899c-8ae6a5156b35" class="">Класс родитель <code>BackgroundService</code> вынуждает нас реализовать метод <code>ExecuteAsync</code> для того, что-бы понимать что именно должна выполнять наша джоба. В нашем случае джоба должна использовать клиента и обращаться к сервису SD за хостами. Потому пишем следующий код внутри метода <code>ExecuteAsync</code></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1b64d566-6a12-43b2-877a-9d3c87a1e0d5" class="code"><code class="language-C#">while (!cancellationToken.IsCancellationRequested)
+{
+    try
+    {
+        var request = new DbResourcesRequest
+        {
+            ClusterName = &quot;cluster&quot;
+        };
+
+        using var stream =
+            _client.DbResources(
+                request,
+                cancellationToken: cancellationToken);
+
+        await foreach (var response in stream.ResponseStream.ReadAllAsync(cancellationToken))
+        {
+            _logger.LogInformation(
+                &quot;Get a new data from SD. Timestamp {Timestamp}&quot;,
+                response.LastUpdated.ToDateTime());
+        }
+    }
+    catch (RpcException ex)
+    {
+        _logger.LogError(ex, &quot;SD throw exception.&quot;);
+        await Task.Delay(SD_TIME_TO_DELAY_MS, cancellationToken);
+    }
+}</code></pre><p id="564c78a4-0fef-45dd-951e-fc7dfc03b677" class="">Что делает данный код, в нашем прото файле лежал контракт, который обязуется выполнить наш второй сервис Service Discovery. Потому в данном коде мы создали запрос в котором просим отдать все имеющиеся данный по кластер имени = cluster. Далее мы создаём запрос к сервису и сервис SD открывает с нами стрим и каждые 10 секунд возвращает нам данные. </p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c45c3774-c398-41a9-938a-66341bf4decc" class="code"><code class="language-C#">stream.ResponseStream.ReadAllAsync(cancellationToken)</code></pre><p id="8ebfe6d4-cf88-4ec5-a5e0-27614cb76e32" class="">Данная часть кода берёт обновленные данные и вычитывает их. Если есть желание запустить и проверить, то стоит в docker-compose.yml файле поправить настройки сервиса и внести более актуальные данные</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e078e98e-0f89-4680-9480-ac37f3080daf" class="code"><code class="language-Docker">service-discovery:
+  image: gitlab-registry.ozon.dev/cs/classroom-10/experts/practice/service-discovery:latest
+  container_name: service-discovery
+  ports:
+    - &quot;6081:80&quot;
+  environment:
+    - ROUTE256_DB_STATE=cluster:0-9:db1:1543;cluster:10-19:db2:1543;cluster1:0:db3:1543
+    - ROUTE256_UPDATE_TIMEOUT=10</code></pre><p id="04edf602-6c41-4cc6-96e7-55498eec29df" class="">После этого перезапустите docker-compose через команду down и запустите снова, через команду docker-compose up.</p><h3 id="b551e26b-d055-4c8d-91a2-06f261bae2ef" class=""><mark class="highlight-brown">Подключить сохранение данных в памяти сервиса</mark></h3><p id="ba32bc62-9d8e-4e5a-bf0f-d66848add426" class="">До этого мы просто оповестили, что мы получили новые данные из сервиса SD. Теперь нам надо данные получаемые от SD класть внутри сервиса и его памяти. Первым делом давайте перейдем к нашей папке <code>ClientBalancing</code> в ней нужно создать новый файл <code>DbEndpoint</code> код представлен ниже</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="04ec0281-0320-4e9f-92ce-309e6bcf7e42" class="code"><code class="language-C#">namespace Ozon.Route256.Practice.CustomerService.ClientBalancing;
+
+public sealed record DbEndpoint(
+    string HostAndPort, 
+    DbReplicaType DbReplica,
+    int[] Buckets);</code></pre><p id="3f45d988-5458-429b-a2f0-ea453ca83edb" class="">Как мы видим данный класс нужен для того, что-бы сохранить значения полученные от сервиса SD. Далее создаём следующий необходимый класс <code>DbReplicaType</code>  код представлен ниже</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bd7e1ad1-1be7-4c78-97be-1db0c338ab53" class="code"><code class="language-C#">namespace Ozon.Route256.Practice.CustomerService.ClientBalancing;
+
+public enum DbReplicaType
+{
+    Master = 0,
+    Sync = 1,
+    Async = 2
+}</code></pre><p id="93f49e48-5d76-4eaf-9ea5-a652e4e3fcc6" class="">В данном коде мы преобразуем тип от grpc контракта в наш внутренний для сервиса. Теперь нам осталось добавить последний класс <code>DbStore</code> но в данном классе нам также нужно добавить интерфейс так как мы будем регистрировать данный класс в нашем DI.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7fbd0c94-752b-450b-8826-8533ec1b6806" class="code"><code class="language-C#">namespace Ozon.Route256.Practice.CustomerService.ClientBalancing;
+
+public interface IDbStore
+{
+    Task UpdateEndpointAsync(IReadOnlyCollection&lt;DbEndpoint&gt; dbEndpoints);
+}
+
+public sealed class DbStore : IDbStore
+{
+    private const int START_INDEX = 0;
+    
+    private DbEndpoint[] _endpoints = Array.Empty&lt;DbEndpoint&gt;();
+
+    public Task UpdateEndpointAsync(IReadOnlyCollection&lt;DbEndpoint&gt; dbEndpoints)
+    {
+        _endpoints = new DbEndpoint[dbEndpoints.Count];
+        
+        foreach (var (dbEndpoint, index) in dbEndpoints.Zip(Enumerable.Range(START_INDEX, dbEndpoints.Count)))
+        {
+            _endpoints[index] = dbEndpoint;
+        }
+
+        return Task.CompletedTask;
+    }
+}</code></pre><p id="4e6304f8-c44e-4e2b-be48-e058caa4a00e" class="">Как можно заметить в данном классе у нас больше логики, как минимум у нас есть один метод <code>UpdateEndpointAsync</code> который занимается обновлением данных полученным из сервиса SD. Теперь нам надо перейти в класс <code>SdConsumerHostedService</code> и передать внутрь нашего конструктора новый интерфейс и использовать его в нашем коде. Пробрасываем интерфейс</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7e85f113-c6e1-4ea5-895b-fc28f607cf2d" class="code"><code class="language-C#">    private readonly IDbStore _dbStore;
+    private readonly SdService.SdServiceClient _client;
+    private readonly ILogger&lt;SdConsumerHostedService&gt; _logger;
+
+    public SdConsumerHostedService(
+        IDbStore dbStore,
+        SdService.SdServiceClient client,
+        ILogger&lt;SdConsumerHostedService&gt; logger)
+    {
+        _dbStore = dbStore;
+        _client = client;
+        _logger = logger;
+    }</code></pre><p id="1b11f321-6a58-43b5-a103-1e16ad7a0a63" class="">После этого нам нужно изменить наш метод <code>ExecuteAsync</code></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4413b719-4964-4460-8ee1-8d94bd437a4c" class="code"><code class="language-C#">await foreach (var response in stream.ResponseStream.ReadAllAsync(cancellationToken))
+{
+    _logger.LogInformation(
+        &quot;Get a new data from SD. Timestamp {Timestamp}&quot;,
+        response.LastUpdated.ToDateTime());
+                    
+    var endpoints = GetEndpoints(response).ToList();
+                    
+    await _dbStore.UpdateEndpointAsync(endpoints);
+}</code></pre><p id="fb4f2540-a9b4-4466-9dd5-a712da5fcb83" class="">Как вы можете заметить у нас используется метод <code>GetEndpoints</code> давайте его добавим в наш код</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e58c6967-b22d-4dd6-98ae-6f0194693a45" class="code"><code class="language-C#">    private static IEnumerable&lt;DbEndpoint&gt; GetEndpoints(DbResourcesResponse response) =&gt;
+        response.Replicas.Select(replica =&gt; new DbEndpoint(
+            $&quot;{replica.Host}:{replica.Port}&quot;,
+            ToDbReplica(replica.Type),
+            replica.Buckets.ToArray()
+        ));
+    
+    private static DbReplicaType ToDbReplica(GrpcReplicaType replicaType) =&gt;
+        replicaType switch
+        {
+            GrpcReplicaType.Master =&gt; DbReplicaType.Master,
+            GrpcReplicaType.Sync =&gt; DbReplicaType.Sync,
+            GrpcReplicaType.Async =&gt; DbReplicaType.Async,
+            _ =&gt; throw new ArgumentOutOfRangeException(nameof(replicaType), replicaType, null)
+        };</code></pre><p id="1a323217-e5d5-477a-a63c-e4937753b22a" class="">После того как мы добавили наш код, нам нужно перейти в <code>Startup</code> и там зарегистрировать наш новый интерфейс и класс реализации. Для этого в методе <code>ConfigureServices</code> нужно добавить код ниже.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6296ea9c-c793-4f0e-a3e0-c86f5a1dd2c0" class="code"><code class="language-C#">serviceCollection.AddSingleton&lt;IDbStore, DbStore&gt;();</code></pre><p id="9a71786e-c8b9-435f-a4d1-f962d3be74aa" class="">На этом всё, давайте запустим сборку нашего сервиса и попробуем его запустить вместе с запуском всего нашего docker compouse. Только перед этим давайте обновим наши данные в нашем файле <code>docker-compose.yml</code> для этого вставьте код ниже.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="21e96311-fbba-461e-a31b-b89ad8b42204" class="code"><code class="language-Docker">customer-service:
+    build:
+      context: ./src/Ozon.Route256.Practice.CustomerService
+      dockerfile: Dockerfile
+    container_name: customer-service
+    ports:
+      - &quot;5081:80&quot;
+    environment:
+      &quot;ROUTE256_SD_ADDRESS&quot;: &quot;http://service-discovery:80&quot;
+      &quot;ROUTE256_GRPC_PORT&quot;: &quot;5005&quot;
+      &quot;ROUTE256_HTTP_PORT&quot;: &quot;5004&quot;</code></pre><h1 id="862eaebf-9709-41fe-a759-8e2edae795b8" class="block-color-purple">Для тех кто прочитал этот материал до конца есть бонус</h1><figure id="7369dcfa-4e61-4c60-a9b9-aacdd85d5279" class="image"><a href="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2015.png"><img style="width:144px" src="%D0%9F%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%20%D0%B4%D0%B5%D0%B8%CC%86%D1%81%D1%82%D0%B2%D0%B8%D0%B8%CC%86%20%D0%B4%D0%BB%D1%8F%20%D0%B2%D0%BE%D1%80%D0%BA%D1%88%D0%BE%D0%BF%202%204202da5e5b1b4e3cad7594d78b8f5204/Untitled%2015.png"/></a></figure><p id="4a50d471-1f6d-4100-810a-6de4a1c78595" class="">Я хочу вам помочь с решением домашки, которая была выдана на нашем воркшопе номер 2. В данном материале не указано решение, но есть подсказка как это можно решить без дополнительного чтения другого материала.</p><p id="837e46a6-25c9-40f8-a428-5a69a86dc710" class=""> Вот пункт о котором идёт речь.</p><blockquote id="69499da9-c895-4b6a-bfef-7cc859397d56" class=""><strong>Клиент для OrderService должен уметь балансировать нагрузку на разные экземпляры этого сервиса (пример как это сделать был в воркшопе).</strong></blockquote><p id="0dfa8dce-bef8-487c-8e55-dd007ef24317" class="">Что нам нужно сделать, что-бы понять как это решить ?<br/>Для этого нам нужно перейти в <br/><code>CustomerService</code> и в класс <code>Startup</code>. Далее нам требуется поправить код в сервисе <code>ConfigureServices</code>. А именно посмотрим ниже.<br/><br/></p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4aaeaefc-7fe2-4948-bb37-b69f7ac014f7" class="code"><code class="language-C#">var factory = new StaticResolverFactory(address =&gt; new[]
+{
+     new BalancerAddress(&quot;service-discovery&quot;, 80)
+});</code></pre><p id="185ba410-ef45-4e4a-82f5-2e52ed3442e0" class="">Данный код нужен для того, что-бы мы могли указать сервисы на которые мы будем балансировать. Если у вас будет две ссылки, то вставьте две ссылки на подключение типа так</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="66dd1aed-53aa-42bb-8f59-08201870a34e" class="code"><code class="language-C#">var factory = new StaticResolverFactory(address =&gt; new[]
+{
+     new BalancerAddress(&quot;service-discovery-1&quot;, 80),
+     new BalancerAddress(&quot;service-discovery-2&quot;, 80),
+     new BalancerAddress(&quot;service-discovery-3&quot;, 80)
+});</code></pre><p id="7e86230f-727e-494c-b6b6-71c4f3a8f7d7" class="">Но кроме добавления строк подключения <code>StaticResolverFactory</code> требуется подключить еще и этот код</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ca109438-0384-45e4-a241-55947bf87f02" class="code"><code class="language-C#">serviceCollection.AddSingleton&lt;ResolverFactory&gt;(factory);</code></pre><p id="b0af44dd-e56c-4195-8311-2d515ae95524" class="">Данный код нужен, что-бы наши адреса балансировки статики прогрузились в DI. Теперь давайте подставим последний код, который должен завершить подключение стандартного балансировщика от grpc.</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="83e25367-4b0e-4cd5-b194-31c34893eb67" class="code"><code class="language-C#">serviceCollection.AddGrpcClient&lt;SdService.SdServiceClient&gt;(options =&gt;
+{
+    options.Address = new Uri(&quot;static:///sd-service&quot;);
+}).ConfigureChannel(x =&gt;
+{
+    x.Credentials = ChannelCredentials.Insecure;
+    x.ServiceConfig = new ServiceConfig
+    {
+        LoadBalancingConfigs = { new LoadBalancingConfig(&quot;round_robin&quot;) }
+    };
+});</code></pre><p id="df14c2aa-5d54-4eb3-afa9-64dd6b07ae5d" class="">В данном адресе <mark class="highlight-teal">&quot;static:///sd-service&quot;</mark><mark class="highlight-default"> используем комбинацию, а именно static - который обозначает, что нам нужно использовать балансировщики статика. А </mark><mark class="highlight-teal">sd-service</mark><mark class="highlight-default"> напрямую не влияет на код, но вы можете получить строку подключения в </mark><code>StaticResolverFactory</code><mark class="highlight-default"> и от переданного имени сервиса зарегистрировать тот или иной балансер. Далее вы можете сами посмотреть, но нам должно хватить этого что-бы подключить балансировщик и выполнить задание домашки.</mark></p><h1 id="f13fe2ad-8275-4b9f-81f8-fc538c17d5c0" class=""><mark class="highlight-default">На этом наш курс на сегодня закончился.</mark><mark class="highlight-red"> <br/>Спасибо всем за внимание.<br/></mark></h1><p id="2327e698-8dd7-4eff-8f84-8ecc427b23ea" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
